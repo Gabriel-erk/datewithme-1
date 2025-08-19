@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Will You Go on a Date?</title>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #ffe0e9;
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        text-align: center;
+    }
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+        color: #ff69b4;
+    }
+    button {
+        padding: 15px 30px;
+        margin: 20px;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+    #yes {
+        background-color: #ff69b4;
+        color: white;
+    }
+    #no {
+        background-color: #ffcccb;
+    }
+</style>
+</head>
+<body>
+
+<h1>Will You Go on a Date With Me?</h1>
+<button id="yes" onclick="alert('Yay! Can’t wait! 💖')">Yes</button>
+<button id="no">No</button>
+
+<script>
+    const noButton = document.getElementById('no');
+
+    noButton.addEventListener('mouseenter', () => {
+        // Move the button to a random position within the viewport
+        const x = Math.random() * (window.innerWidth - noButton.offsetWidth);
+        const y = Math.random() * (window.innerHeight - noButton.offsetHeight);
+        noButton.style.position = 'absolute';
+        noButton.style.left = x + 'px';
+        noButton.style.top = y + 'px';
+    });
+
+    noButton.addEventListener('click', () => {
+        alert("Haha, you can't press no! 😜");
+    });
+</script>
+
+</body>
+</html>
