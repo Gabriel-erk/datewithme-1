@@ -48,7 +48,7 @@
 <script>
     const noButton = document.getElementById('no');
 
-    noButton.addEventListener('mouseenter', () => {
+    noButton.addEventListener('click', () => {
         // Move the button to a random position within the viewport
         const x = Math.random() * (window.innerWidth - noButton.offsetWidth);
         const y = Math.random() * (window.innerHeight - noButton.offsetHeight);
@@ -57,9 +57,9 @@
         noButton.style.top = y + 'px';
     });
 
-    noButton.addEventListener('click', () => {
-        alert("Opa, opção errada 😜");
-    });
+    // noButton.addEventListener('click', () => {
+    //     alert("Opa, opção errada 😜");
+    // });
 </script>
 
 </body>
